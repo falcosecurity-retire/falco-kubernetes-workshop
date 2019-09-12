@@ -12,9 +12,7 @@ Today's Markdown: https://hackmd.io/T7wVDjZ4TCyVhMNHXujmoQ
 ```bash
 
 ssh falco@1.2.3.4
-# Current password: FalcoCSWS!
-# Create new password
-ssh falco@1.2.3.4
+# Enter password
 
 
 ``` 
