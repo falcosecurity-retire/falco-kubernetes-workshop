@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: scary
+spec:
+  hostNetwork: true
+  hostPID: true
+  containers:
+    - name: nginx
+      image: nginx
+      volumeMounts:
+        - mountPath: "/mrow"
+          name: localvol
+          readOnly: false
+      securityContext:
+        # Running in privileged ----------------------------------------------------------------------------------------
+        privileged: true
+        # --------------------------------------------------------------------------------------------------------------
+  volumes:
+    - name: localvol
+      hostPath:
+        path: "/"
