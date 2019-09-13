@@ -9,13 +9,11 @@ spec:
     - name: nginx
       image: nginx
       volumeMounts:
-        - mountPath: "/mrow"
+        - mountPath: "/scary"
           name: localvol
           readOnly: false
       securityContext:
-        # Running in privileged ----------------------------------------------------------------------------------------
         privileged: true
-        # --------------------------------------------------------------------------------------------------------------
   volumes:
     - name: localvol
       hostPath:
